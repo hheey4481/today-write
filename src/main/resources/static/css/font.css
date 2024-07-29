@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'HancomSans-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cafe24Simplehae', sans-serif;
+    font-size: 14px; /* 폰트 크기를 줄였습니다 */
+}
+
+.rounded-pill {
+    border-radius: 9999px;
+}
+
+.custom-font {
+    font-family: 'HancomSans-Light', sans-serif;
+}

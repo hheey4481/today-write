@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/font.css" rel="stylesheet">
+    <title>Today-Write</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar').innerHTML = data;
+                });
+        });
+    </script>
+</head>
+<body class="bg-gray-100">
+
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" class="w-1/5 h-full custom-font">
+        <!-- The menu.html content will be loaded here -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="w-4/5 p-10">
+        <header class="mb-8">
+            <div class="flex justify-center mb-6">
+                <h1 class="text-4xl font-bold bg-black text-white px-6 py-2 rounded-pill custom-font">Today-Write</h1>
+            </div>
+            <div class="flex items-center space-x-4 w-full">
+                <select class="border rounded px-4 py-2">
+                    <option value="topic">topic</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <input type="text" class="border rounded px-4 py-2" placeholder="Search">
+                <button class="bg-gray-800 text-white rounded px-4 py-2">Search</button>
+                <button class="ml-auto bg-blue-600 text-white rounded px-4 py-2">Write</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="mb-8">
+                <div class="bg-white rounded shadow p-6">
+                    <h2 class="text-2xl font-semibold mb-2">오늘의 토픽</h2>
+                    <p class="text-gray-600">2020년 4월 1일</p>
+                    <p class="text-gray-800">단어의 정의</p>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <div class="bg-white rounded shadow p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-lg font-semibold">사용자</h3>
+                        <span class="text-gray-600">즐겨찾기 수</span>
+                    </div>
+                    <p class="text-gray-600">2020년 4월 1일</p>
+                    <p class="text-gray-800">내용</p>
+                    <div class="flex justify-end space-x-2 mt-4">
+                        <button class="border rounded px-4 py-2">즐겨찾기</button>
+                        <button class="border rounded px-4 py-2">✔</button>
+                    </div>
+                </div>
+
+                <!-- Repeat the above div for more entries -->
+
+            </section>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
